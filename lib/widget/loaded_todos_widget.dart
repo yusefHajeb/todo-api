@@ -1,8 +1,11 @@
 // import 'dart:html';
 
 import 'package:flutter/material.dart';
-
-import '../todo.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:todo_api/bloc/details_bloc.dart';
+import 'package:todo_api/page/detail_page.dart';
+import 'package:todo_api/models/todo.dart';
+import 'package:todo_api/models/todo.dart';
 
 class LoadidTodosWidget extends StatelessWidget {
   List<Todo> todos;
@@ -15,6 +18,10 @@ class LoadidTodosWidget extends StatelessWidget {
         return Column(
           children: [
             ListTile(
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (_) => DetailsTodos(detail: todos[index])));
+                },
                 title: Text(todos[index].title.toString()),
                 leading: CircleAvatar(
                   child: Text(todos[index].id.toString()),
@@ -23,7 +30,7 @@ class LoadidTodosWidget extends StatelessWidget {
                 trailing: todos[index].completed.toString() == "true"
                     ? const Icon(
                         Icons.done,
-                        color: Color.fromARGB(255, 255, 219, 110),
+                        color: Color.fromARGB(255, 44, 215, 89),
                       )
                     : null)
           ],

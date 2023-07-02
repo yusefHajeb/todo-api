@@ -2,8 +2,7 @@
 // import 'package:http/http.dart' as httdcxxp;
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:meta/meta.dart';
-import 'package:todo_api/todo.dart';
-
+import 'package:todo_api/models/todo.dart';
 import '../api/api.dart';
 
 part 'todos_event.dart';

@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 
-import 'package:todo_api/todo.dart';
+import 'package:todo_api/models/todo.dart';
 
 // import '../lib/todo.dart';
 

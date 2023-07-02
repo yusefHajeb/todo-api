@@ -35,6 +35,10 @@ class Todo {
     );
   }
 
+  factory Todo.fromJson2(data) {
+    return Todo.fromMap(json.decode(data));
+  }
+
   /// `dart:convert`
   ///
   /// Converts [Todo] to a JSON string.

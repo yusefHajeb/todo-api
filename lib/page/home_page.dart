@@ -4,8 +4,8 @@ import 'package:todo_api/widget/loaded_todos_widget.dart';
 import 'package:todo_api/widget/loading_widget.dart';
 
 // import 'bloc/todos_bloc.dart';
-import 'cubit/todos_cubit.dart';
-import 'widget/error_widget.dart';
+import '../cubit/todos_cubit.dart';
+import '../widget/error_widget.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
