@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:todo_api/bloc/todos_bloc.dart';
+import 'package:todo_api/cubit/todos_cubit.dart';
 
 class WidgetErrorTodos extends StatelessWidget {
   final String message;
@@ -25,7 +26,7 @@ class WidgetErrorTodos extends StatelessWidget {
           ),
           MaterialButton(
             onPressed: () {
-              BlocProvider.of<TodosBloc>(context).add(GetAllTodosEvent());
+              BlocProvider.of<TodosCubit>(context).getAllTodosEvent();
             },
             color: Colors.amber,
             child: const Text(

@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'api/api.dart';
 import 'bloc/todos_bloc.dart';
+import 'cubit/todos_cubit.dart';
 import 'home_page.dart';
 
 void main() {
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => TodosBloc(tods: TodoApi())..add(GetAllTodosEvent()),
+      create: (context) => TodosCubit(tods: TodoApi())..getAllTodosEvent(),
       child: const MaterialApp(
         home: HomePage(),
       ),
