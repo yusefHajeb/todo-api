@@ -19,7 +19,9 @@ class HomePage extends StatelessWidget {
           } else if (state is LoadingState) {
             return LoadingWidget();
           } else {
-            return WidgetErrorTodos();
+            return WidgetErrorTodos(
+              message: "Something Went Worng,  Plase Try Again",
+            );
           }
         }));
   }

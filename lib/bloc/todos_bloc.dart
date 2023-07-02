@@ -13,7 +13,7 @@ class TodosBloc extends Bloc<TodosEvent, TodosState> {
   final TodoApi tods;
   TodosBloc({required this.tods}) : super(LoadingState()) {
     on<TodosEvent>((event, emit) async {
-      if (event is GetAllTodos) {
+      if (event is GetAllTodosEvent) {
         emit(LoadingState());
         try {
           final todos = await tods.getAllData();

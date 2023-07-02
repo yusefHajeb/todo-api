@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => TodosBloc(tods: TodoApi())..add(GetAllTodos()),
+      create: (context) => TodosBloc(tods: TodoApi())..add(GetAllTodosEvent()),
       child: const MaterialApp(
         home: HomePage(),
       ),
